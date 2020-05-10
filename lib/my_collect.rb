@@ -1,15 +1,15 @@
-def my_collect(array)
-  
+collection = []
+def my_collect(collection)
   i = 0 
-  collection = []
-  while i < array.length 
-  collection << yield(array[i])
+  array = []
+  while i < collection.length 
+  array << yield(collection[i])
   i = i + 1
 end
-collection
+array
 end
 
-my_collect(array) do |name|
+my_collect(collection) do |name|
   name.split(" ".last)
 end
 
